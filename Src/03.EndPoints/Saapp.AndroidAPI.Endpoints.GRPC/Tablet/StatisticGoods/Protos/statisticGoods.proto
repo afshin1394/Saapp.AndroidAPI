@@ -1,0 +1,97 @@
+syntax = "proto3";
+
+option csharp_namespace = "Saapp.AndroidAPI.Endpoints.GRPC.Tablet.StatisticGoods.Protos";
+
+
+
+package Tablet;
+
+// The greeting service definition.
+service StatisticGoods {
+  // Sends a greeting
+  rpc GetStatisticGoods (StatisticGoodsRequest) returns (StatisticGoodsReplyList);
+}
+
+// The request message containing the user's name.
+message StatisticGoodsRequest {
+
+}
+
+// The response message containing the greetings.
+message StatisticGoodsReply {
+
+  int32 goodsCodeID = 1;
+  string goodsName= 2;
+  string goodsGroupName = 3;
+  int32 goodsGroupID = 4;
+  int32 brandID = 5;
+  string brandName = 6;
+  float length = 7;
+  float width = 8;
+  float heigth = 9;
+  int32 sizeUnitID = 10;
+  float pureWeight = 11;
+  float nonPureWeight = 12;
+  float boxWeigth = 13;
+  int32 weightUnitID = 14;
+  int32 count1 = 15;
+  int32 count2 = 16;
+  int32 count3 = 17;
+
+
+
+
+
+
+//  int32 row = 1;
+//  int32 goodsCodeID = 2;
+
+//  string goodsCode= 3;
+//  string goodsName= 4;
+//  string goodsGroupName = 5;
+
+//  int32 saleableInventoryQuantity= 5;
+// int32 supplierID = 6;
+//  int32 quantityInBox= 7;
+//  int32 quantityInPack= 8;
+//  int32 quantity = 9;
+//  string sortCode= 10;
+//  int32 IsTaxable = 11;
+//  float sellPrice = 12;
+//  float PastSellAmount = 13;
+//  float consumerPrice = 14;
+//  int32 goodsGroupID = 15;
+//  int32 brandID = 16;
+//  float buyPrice = 17;
+//  float length = 18;
+//  float width = 19;
+//  float heigth = 20;
+//  int32 sizeUnitID = 21;
+//  float pureWeight = 22;
+// float nonPureWeight = 23;
+// float boxWeigth = 24;
+// int32 weightUnitID = 25;
+// int32 count1 = 26;
+// int32 count2 = 27;
+// int32 count3 = 28;
+//  string barcode = 26;
+//  string productionDate = 27;
+//  string weigthUnitName = 28;
+
+//  string brandName = 29;
+//  string sizeUnitName = 30;
+//  int32 countUnitID = 31;
+//  string countUnitName = 32;
+//  string expirationDate  = 33;
+//  string batchNumber = 34;
+//  float orginalSellPrice= 35;
+//  float orginalConsumerPrice= 36;
+
+}
+
+
+
+
+message StatisticGoodsReplyList{
+	repeated StatisticGoodsReply StatisticGoods = 1;
+}

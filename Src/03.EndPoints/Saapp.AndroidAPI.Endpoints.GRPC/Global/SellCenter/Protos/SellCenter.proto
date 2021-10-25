@@ -1,0 +1,32 @@
+syntax = "proto3";
+
+option csharp_namespace = "Saapp.AndroidAPI.Endpoints.GRPC.Global.SellCenter.Protos";
+
+package Global;
+
+
+
+// The greeting service definition.
+service SellCenter {
+  // Sends a greeting
+  rpc GetSellCenters (SellCenterRequest) returns (SellCenterReplyList);
+}
+
+// The request message containing the user's name.
+message SellCenterRequest {
+
+}
+
+// The response message containing the greetings.
+message SellCenterReply {
+   int32 centerID = 1;
+   string centerCode = 2;
+   string centerName = 3;
+   float latitude = 4;
+   float longitude = 5;
+  
+}
+
+message SellCenterReplyList{
+	repeated SellCenterReply SellReplies = 1;
+}

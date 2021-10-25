@@ -1,0 +1,29 @@
+syntax = "proto3";
+
+option csharp_namespace = "Saapp.AndroidAPI.Endpoints.GRPC.Amargar.PlaceByCenterID.Protos";
+
+package Amargar;
+
+
+service PlaceByCenterID {
+  rpc GetPlacesByCenterID (PlaceByCenterIDRequest) returns (PlaceByCenterIDReplyList);
+}
+
+// The request message containing the user's name.
+message PlaceByCenterIDRequest {
+   int32 centerID = 1;
+}
+
+// The response message containing the greetings.
+message PlaceByCenterIDReply {
+   int32 placeID = 1;
+   string placeName = 2;
+   int32 placeTypeCode = 3;
+   int32 linkPlaceID= 4;
+   string areaCode = 5;
+  
+}
+
+message PlaceByCenterIDReplyList{
+	repeated PlaceByCenterIDReply placesByCenterId = 1;
+}

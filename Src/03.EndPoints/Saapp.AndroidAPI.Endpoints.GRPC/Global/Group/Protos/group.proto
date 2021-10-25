@@ -1,0 +1,33 @@
+syntax = "proto3";
+
+option csharp_namespace = "Saapp.AndroidAPI.Endpoints.GRPC.Global.Group.Protos";
+
+
+package Global;
+
+
+
+// The greeting service definition.
+service Group {
+  // Sends a greeting
+  rpc GetGroup (GroupRequest) returns (GroupReplyList);
+}
+
+// The request message containing the user's name.
+message GroupRequest {
+
+}
+
+// The response message containing the greetings.
+message GroupReply {
+   int32 groupID = 1;
+   string groupName = 2;
+   int32 linkGroupID = 3;
+   int32 rootID= 4;
+   int32 groupTypeCode = 5;
+  
+}
+
+message GroupReplyList{
+	repeated GroupReply Groups = 1;
+}

@@ -1,0 +1,32 @@
+syntax = "proto3";
+
+option csharp_namespace = "Saapp.AndroidAPI.Endpoints.GRPC";
+
+package Warehouse;
+
+// The greeting service definition.
+service KalaGoroh {
+  // Sends a greeting
+  rpc GetKalaGoroh (KalaGorohRequest) returns (KalaGorohReplyList);
+}
+
+// The request message containing the user's name.
+message KalaGorohRequest {
+  string ccKalaGoroh = 1;
+}
+
+// The response message containing the greetings.
+message KalaGorohReply {
+   int32 GoodsId = 1;
+   string GoodsName = 2;
+   int32 GroupId = 3;
+   string GroupName = 4;
+   int32 GroupTypeCode = 5;
+   int32 ParentId = 6;
+   int32 RootId = 7;
+   string GroupCode = 8;
+}
+
+message KalaGorohReplyList{
+	repeated KalaGorohReply kalaGorohs = 1;
+}

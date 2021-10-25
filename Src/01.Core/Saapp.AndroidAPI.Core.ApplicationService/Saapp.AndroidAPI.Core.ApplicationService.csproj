@@ -1,0 +1,29 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Warehouse\Goroh\**" />
+    <EmbeddedResource Remove="Warehouse\Goroh\**" />
+    <None Remove="Warehouse\Goroh\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Amargar\PlaceByCenterID\Commands\" />
+    <Folder Include="Global\Group\Commands\" />
+    <Folder Include="Global\SellCenter\Commands\" />
+    <Folder Include="Tablet\StatisticGoods\Commands\" />
+    <Folder Include="Warehouse\KalaGoroh\Commands\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MediatR" Version="9.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Saapp.AndroidAPI.Core.Domain\Saapp.AndroidAPI.Core.Domain.csproj" />
+  </ItemGroup>
+
+</Project>

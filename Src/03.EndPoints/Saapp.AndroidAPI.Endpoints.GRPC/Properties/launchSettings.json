@@ -1,0 +1,12 @@
+﻿{
+    "profiles": {
+      "Saapp.AndroidAPI.Endpoints.GRPC": {
+        "commandName": "Project",
+        "dotnetRunMessages": "true",
+        "launchBrowser": true,
+        "environmentVariables": {
+          "ASPNETCORE_ENVIRONMENT": "Development"
+        }
+      }
+    }
+  }
